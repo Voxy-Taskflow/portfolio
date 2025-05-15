@@ -1,0 +1,118 @@
+.games-portfolio {
+  background: #000;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #FFA500;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: #FFA500;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #FF8C00;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.game-card {
+  position: relative;
+  border: 1px solid #FFA500;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  aspect-ratio: 16/9;
+}
+
+.game-title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  margin: 0;
+  color: #FFA500;
+  z-index: 2;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  pointer-events: none;  /* Ensure clicks pass through to the card */
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-image {
+  transform: scale(1.05);
+}
+
+.game-description {
+  color: #FFA500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.game-card:hover .game-description {
+  transform: translateY(0);
+}
+
+.portfolio-intro {
+  text-align: center;
+  color: #FFA500;
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+}
+
+.game-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;  /* Ensure clicks pass through to the card */
+}
+
+.game-card:hover .game-content {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.game-card:hover .game-title {
+  opacity: 0;
+}
+
+.game-platform {
+  color: #FFA500;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  text-align: center;
+  color: #FFA500;
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
