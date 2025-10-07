@@ -2,22 +2,21 @@
 
 import { motion } from 'framer-motion'
 import { 
-  React, 
-  Node, 
+  Code2, 
+  Server, 
   Database, 
   GitBranch, 
   Cloud, 
   Shield,
   Smartphone,
-  Monitor,
-  Server
+  Monitor
 } from 'lucide-react'
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend',
-      icon: Monitor,
+      icon: Code2,
       color: 'text-blue-400',
       skills: [
         { name: 'React', level: 95 },
